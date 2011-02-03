@@ -1,0 +1,34 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+  xmlns:beans="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/security
+           http://www.springframework.org/schema/security/spring-security-3.0.3.xsd">
+
+	<http auto-config="false" use-expressions="true">
+		<intercept-url pattern="/images/**" filters="none" requires-channel="any" />
+		<intercept-url pattern="/script/**" filters="none" requires-channel="any" />
+		<intercept-url pattern="/style/**" filters="none" requires-channel="any" />
+
+		<intercept-url pattern="/login.html" access="isAnonymous()" />
+		<intercept-url pattern="/signup.html" access="isAnonymous() or isAuthenticated()" />
+		<intercept-url pattern="/index.jsp" access="isAnonymous() or isAuthenticated()" />
+
+		<!-- Secured Pages -->
+		<intercept-url pattern="/**" access="isAuthenticated()" requires-channel="any" />
+
+		<access-denied-handler error-page="/index.html?status=ACCESS_DENIED" />
+		<http-basic />
+		<anonymous />
+		<form-login login-page="/login.html"  authentication-failure-url="/login.html" default-target-url="/index.html" always-use-default-target="true" />
+		<logout logout-success-url="/login.html?status=LOGOUT" invalidate-session="true" />
+	</http>
+
+	<authentication-manager>
+		<authentication-provider user-service-ref="userService">
+			<password-encoder hash="sha" base64="false" />
+		</authentication-provider>
+	</authentication-manager>
+
+</beans:beans>

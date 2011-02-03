@@ -1,0 +1,74 @@
+body {
+	background-color: #C9DE96;
+	font-family: Palatino, 'Palatino Linotype', Georgia, serif;
+	font-size: 16px;
+}
+
+.container div:first-child {
+	margin-top: 5.0em;
+	min-height: 350px;
+}
+
+fieldset legend {
+	font-size: 26px;
+	font-family: Papyrus;
+}
+
+#task-entry {
+	margin-top: 30px;
+	text-align: center;
+}
+
+table#todo-list {
+	margin-right: 40px;
+	min-height: 200px;
+}
+
+table#todo-list th {
+	text-align: left;
+	font-size: 24px;
+	font-family: Papyrus;
+	background-color: #C9DE96;
+}
+
+table#todo-list tr td {
+	padding: 5px 0px;
+	border-bottom: thin dashed #ccc;
+	word-wrap: break-word; /* CSS 3 */
+}
+
+input.larger {
+	margin: 0;
+	font-size: 16px;
+	height: 35px;
+}
+
+tbody tr:nth-child(odd) td,tbody tr.even td {
+	background-color: #F1F8F3;
+}
+
+tbody tr:nth-child(even) td,tbody tr.even td {
+	background-color: #C9DE96;
+}
+
+#task, #due-date {
+	border: 1px solid #369;
+}
+
+.removable {
+	float: right;
+}
+
+#footer {
+	padding-top: 35px;
+}
+
+#footer #log-message {
+	float: right;
+}
+
+.signup-error {
+	color: red;
+	margin: 0 0 0 1em;
+	font-size: .9em;
+}
