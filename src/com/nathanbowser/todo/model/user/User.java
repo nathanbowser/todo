@@ -21,7 +21,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.GrantedAuthorityImpl;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.nathanbowser.todo.model.candidate.TodoList;
+import com.nathanbowser.todo.model.task.TodoList;
 
 @SuppressWarnings("serial")
 @Entity

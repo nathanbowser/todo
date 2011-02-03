@@ -1,4 +1,4 @@
-package com.nathanbowser.todo.model.candidate;
+package com.nathanbowser.todo.model.task;
 
 import java.util.Iterator;
 import java.util.List;

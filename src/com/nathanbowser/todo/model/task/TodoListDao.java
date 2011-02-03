@@ -1,4 +1,4 @@
-package com.nathanbowser.todo.model.candidate;
+package com.nathanbowser.todo.model.task;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

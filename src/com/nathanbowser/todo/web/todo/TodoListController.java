@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.nathanbowser.todo.model.candidate.Task;
-import com.nathanbowser.todo.model.candidate.TaskService;
+import com.nathanbowser.todo.model.task.Task;
+import com.nathanbowser.todo.model.task.TaskService;
 
 @Controller
 public class TodoListController {

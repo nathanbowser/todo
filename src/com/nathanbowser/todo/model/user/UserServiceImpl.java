@@ -13,7 +13,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.nathanbowser.todo.model.candidate.TodoList;
+import com.nathanbowser.todo.model.task.TodoList;
 
 @Service("userService")
 public class UserServiceImpl implements UserService {

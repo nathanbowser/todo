@@ -1,4 +1,4 @@
-package com.nathanbowser.todo.model.candidate;
+package com.nathanbowser.todo.model.task;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -37,7 +37,7 @@ public class TodoList {
 
 	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
 	@JoinTable(name = "todo_tasks", joinColumns = @JoinColumn(name = "todo_list_id"), inverseJoinColumns = @JoinColumn(name = "task_id"))
-	@OrderBy("dueDate asc")
+	@OrderBy("dueDate asc") // TODO Remove this if mysql complains on when creating the tables, then bring it back!
 	private final List<Task> tasks = new ArrayList<Task>();
 
 	public TodoList() {
